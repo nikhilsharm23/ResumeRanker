@@ -1,0 +1,35 @@
+SYNTHETIC TEST RESUME — NOT A REAL PERSON
+
+Aarav Samplecandidate
+Chennai, India | Relocation: Not required
+Email: aarav.sample@example.invalid | Phone: 0000000000
+
+PROFESSIONAL SUMMARY
+Environmental sustainability professional with 3 years of independently delivering Life Cycle Assessment (LCA) projects. Experienced in life cycle inventory (LCI) collection, data validation, LCA modelling, and documenting assumptions for traceable, audit-ready results. Seeking an onsite LCA Consultant role in Chennai.
+
+SKILLS
+Life Cycle Assessment (LCA), Life Cycle Inventory (LCI), GaBi, SimaPro, ISO 14040, ISO 14044, Environmental Product Declaration (EPD), life cycle impact assessment (LCIA), data quality control, operational data collection, energy and logistics analysis, public benchmarking, stakeholder management, technical reporting.
+
+PROFESSIONAL EXPERIENCE
+LCA Analyst | Example Sustainability Studio | 2023–2026
+- Independently completed 3 LCA studies for manufacturing and construction products using GaBi and SimaPro.
+- Collected plant-level material, energy, assembly, supplier, and transportation data with cross-functional client teams.
+- Validated and standardized LCI datasets; documented gaps, data quality, assumptions, and model boundaries.
+- Built and reviewed LCA models following ISO 14040 and ISO 14044; prepared findings for client review.
+- Compiled public benchmarks from research papers, industry reports, and LCA databases; contributed to EPD documentation.
+- Managed client stakeholders, project schedules, and delivery milestones; willing to travel across India.
+
+EDUCATION
+Master of Science in Environmental Science | Example University | 2022
+Bachelor of Science in Environmental Studies | Example College | 2020
+
+PROJECTS
+1. Cradle-to-gate LCA of a construction material — collected and validated primary LCI data, modelled impacts in GaBi, and documented assumptions.
+2. Comparative packaging LCA — modelled alternative materials in SimaPro and benchmarked results against public studies.
+3. Product EPD support — reviewed inventory quality and prepared traceable evidence aligned with ISO 14040 and ISO 14044.
+
+LANGUAGES
+English — fluent (spoken and written)
+
+NOTE
+This fictional resume is created only to verify extraction and ranking. It is not part of the supplied 47-resume dataset and must not be used as a real candidate record.

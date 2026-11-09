@@ -1,0 +1,16 @@
+{
+  "name": "resume-ranker",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "mammoth": "1.13.0",
+    "next": "14.2.35",
+    "pdf-parse": "2.4.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
