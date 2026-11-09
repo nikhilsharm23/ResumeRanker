@@ -2,6 +2,10 @@
 const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["pdf-parse", "mammoth"],
+    outputFileTracingIncludes: {
+      "/api/pile": ["./data/resumes/**/*"],
+      "/api/resume/*": ["./data/resumes/**/*"],
+    },
   },
 };
 
