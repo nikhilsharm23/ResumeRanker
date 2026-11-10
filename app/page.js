@@ -52,22 +52,46 @@ export default function Page() {
 
   const loadPile = useCallback(async () => {
     setLoading(true);
+    let lastError;
     try {
-      const response = await fetch("/api/pile", { cache: "no-store" });
-      if (!response.ok) throw new Error(`The server returned ${response.status}.`);
+      let data;
 
-      const data = await response.json();
-      if (!Array.isArray(data)) throw new Error("The server returned an invalid response.");
+      // Serverless functions can briefly fail to connect during a cold start.
+      // Retry those transient failures so a single dropped request does not
+      // make the entire resume library look unavailable.
+      for (let attempt = 0; attempt < 3; attempt += 1) {
+        try {
+          const response = await fetch("/api/pile", {
+            cache: "no-store",
+            signal: AbortSignal.timeout(15_000),
+          });
+          if (!response.ok) {
+            const error = new Error(`The server returned ${response.status}.`);
+            if (response.status < 500) throw Object.assign(error, { retryable: false });
+            throw error;
+          }
+
+          data = await response.json();
+          if (!Array.isArray(data)) throw new Error("The server returned an invalid response.");
+          break;
+        } catch (error) {
+          lastError = error;
+          if (error.retryable === false || attempt === 2) throw error;
+          await new Promise((resolve) => setTimeout(resolve, 700 * (attempt + 1)));
+        }
+      }
+
       setPile(data);
     } catch (error) {
-      setPile([
+      // Keep previously loaded candidates visible if a manual refresh fails.
+      setPile((current) => current.length ? current : [
         {
           id: "pile-error",
           fileName: "data/resumes",
-          name: "Resume folder",
+          name: "Resume library",
           source: "pile",
           status: "error",
-          error: `Could not load the resume folder. ${error.message}`,
+          error: `Could not load the resume library after three attempts. ${lastError?.message || error.message}`,
         },
       ]);
     } finally {
